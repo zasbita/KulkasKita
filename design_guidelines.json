@@ -1,0 +1,97 @@
+{
+  "theme": "Light",
+  "archetype": "1 (Organic & Earthy)",
+  "context": "Thumb-driven mobile web app for Indonesian couples managing groceries at traditional markets.",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Figtree",
+    "hierarchy": {
+      "h1": "text-4xl tracking-tighter font-black text-primary",
+      "h2": "text-2xl tracking-tight font-bold text-primary",
+      "h3": "text-xl font-bold text-primary",
+      "body": "text-base leading-relaxed text-primary/90",
+      "small": "text-sm text-muted-foreground",
+      "overline": "text-xs tracking-[0.2em] uppercase font-bold text-accent"
+    }
+  },
+  "colors": {
+    "background": "#F9F8F6",
+    "surface": "#FFFFFF",
+    "primary": "#2E4D3A",
+    "primary_foreground": "#FFFFFF",
+    "accent": "#D96C5B",
+    "accent_foreground": "#FFFFFF",
+    "muted": "#EBE8E0",
+    "muted_foreground": "#78766F",
+    "border": "#E2DFD6",
+    "success": "#4CAF50",
+    "warning": "#FF9800",
+    "destructive": "#F44336"
+  },
+  "spacing": {
+    "container_padding": "p-4 sm:p-6",
+    "touch_target_min": "min-h-[48px] min-w-[48px]",
+    "list_gap": "gap-4",
+    "section_gap": "gap-8"
+  },
+  "components": {
+    "bottom_nav": {
+      "layout": "fixed bottom-0 left-0 right-0 max-w-md mx-auto h-20 bg-white/90 backdrop-blur-xl border-t border-border flex justify-around items-center px-2 z-50",
+      "active_state": "text-accent scale-110 transition-transform font-bold",
+      "inactive_state": "text-muted-foreground font-medium"
+    },
+    "card": {
+      "style": "bg-white rounded-2xl p-4 shadow-sm border border-border relative overflow-hidden"
+    },
+    "checkbox": {
+      "size": "w-8 h-8 sm:w-10 sm:h-10 rounded-xl",
+      "checked_state": "bg-primary text-white border-primary",
+      "unchecked_state": "border-2 border-muted bg-transparent"
+    },
+    "button_primary": {
+      "style": "bg-primary text-white rounded-xl min-h-[56px] px-6 font-bold flex items-center justify-center w-full active:scale-[0.98] transition-transform shadow-md"
+    },
+    "button_accent": {
+      "style": "bg-accent text-white rounded-xl min-h-[56px] px-6 font-bold flex items-center justify-center w-full active:scale-[0.98] transition-transform shadow-md"
+    },
+    "chip": {
+      "style": "px-4 py-2 rounded-full bg-muted text-primary text-sm font-medium border border-border whitespace-nowrap active:bg-accent active:text-white"
+    }
+  },
+  "layout": {
+    "app_container": "max-w-md mx-auto min-h-screen bg-background pb-24 relative shadow-xl overflow-hidden",
+    "header": "pt-8 pb-4 px-6 sticky top-0 bg-background/90 backdrop-blur-md z-40 flex items-center justify-between"
+  },
+  "media": {
+    "login_hero": {
+      "url": "https://images.unsplash.com/photo-1556911261-6bd341186b2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxjb3VwbGUlMjBjb29raW5nJTIwa2l0Y2hlbiUyMHdhcm18ZW58MHx8fHwxNzgzNDgxMzI3fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Couple cooking together in a warm kitchen. Use for login background."
+    },
+    "empty_state_groceries": {
+      "url": "https://images.unsplash.com/photo-1612362426802-dcc0ccd25f64?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHZlZ2V0YWJsZXMlMjBtYXJrZXQlMjBmbGF0bGF5fGVufDB8fHx8MTc4MzQ4MTMyN3ww&ixlib=rb-4.1.0&q=85",
+      "description": "Fresh vegetables flatlay. Use as an accent image."
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "usage": "Use crisp, medium-weight icons. Size 24px for bottom nav, 20px for inline actions."
+  },
+  "accessibility": {
+    "contrast": "Ensure primary text on background meets WCAG AA.",
+    "touch_targets": "All interactive elements MUST have a minimum dimension of 48x48 pixels.",
+    "test_ids": "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  },
+  "instructions_to_main_agent": [
+    "Design specifically for a mobile form factor using 'max-w-md mx-auto' to simulate a mobile app container centered on desktop displays.",
+    "Update tailwind.config.js to include 'Outfit' (headings) and 'Figtree' (body) fonts.",
+    "Implement bottom tab navigation consisting of: Stok Kulkas, Meal Planner, Daftar Belanja, Riwayat. Keep it sticky at the bottom using Fixed positioning. Ensure the main container has pb-24.",
+    "Create a Login screen (Google Auth) + Household invite code screen with the 'login_hero' image as a warm header background.",
+    "Build the 'Weekly Meal Planner' (Senin-Minggu) displaying Sarapan, Makan Siang, Makan Malam. Include input with ingredient suggestion chips.",
+    "Build 'Stok Kulkas' (Fridge inventory) as a simple, thumb-friendly list without quantities.",
+    "Build 'Daftar Belanja' (Grocery list) grouped by category (Sayuran, Bumbu Dapur, Daging/Protein, Kebutuhan Rumah). CRITICAL: Use massive custom checkboxes (w-8 h-8 or w-10 h-10) for one-handed operation.",
+    "Include 'Generate Daftar Belanja' and 'Selesai Belanja Minggu Ini' buttons where applicable. Include 'Gunakan Menu Ini Lagi' in the History screen.",
+    "Ensure all text is in Bahasa Indonesia.",
+    "Do not use generic Shadcn cards everywhere; use soft rounded-2xl containers with the warm, earthy color palette.",
+    "Apply `data-testid` attributes aggressively to all buttons, tabs, checkboxes, and input fields."
+  ]
+}
